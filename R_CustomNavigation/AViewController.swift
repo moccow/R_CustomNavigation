@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class AViewController: UIViewController {
     
     @IBOutlet weak var customNavigationBar: CustomNavigationBar! {
         didSet {
@@ -21,5 +21,10 @@ class SecondViewController: UIViewController {
 
         // カスタムナビゲーションバーを作成
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        customNavigationBar.setCurrentVc(type: .a)
     }
 }

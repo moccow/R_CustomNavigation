@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomViewController: UIViewController {
+class TopViewController: UIViewController {
     
     @IBOutlet weak var customNavigationBar: CustomNavigationBar!
     
@@ -20,10 +20,14 @@ class CustomViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        customNavigationBar.setCurrentVc(type: .top)
+    }
+
     @IBAction func secondButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "second") as! SecondViewController
-        print("=========== \(navigationController)")
+            let vc = storyboard.instantiateViewController(withIdentifier: "a") as! AViewController
         navigationController?.pushViewController(vc, animated: true)
     }
 }
