@@ -9,6 +9,8 @@
 import UIKit
 
 class CustomNavigationBar: UIView {
+    
+    static let barHeight: CGFloat = 85.0
     // カスタムナビゲーションバーの要素を配置する
     // 画像ボタンやその他のコントロールをここに配置
     let backButton: UIButton = {
@@ -57,7 +59,7 @@ class CustomViewController: UIViewController {
         super.viewDidLoad()
 
         // カスタムナビゲーションバーを作成
-        let customNavigationBar = CustomNavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 80))
+        let customNavigationBar = CustomNavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: CustomNavigationBar.barHeight))
         customNavigationBar.navigationViewController = self.navigationController
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
@@ -71,7 +73,7 @@ class CustomViewController: UIViewController {
             customNavigationBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             customNavigationBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             customNavigationBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            customNavigationBar.heightAnchor.constraint(equalToConstant: 80),
+            customNavigationBar.heightAnchor.constraint(equalToConstant: CustomNavigationBar.barHeight),
         ])
     }
     
