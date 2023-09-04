@@ -40,19 +40,32 @@
                                     <action selector="secondButtonTapped:" destination="1XK-Bi-gCu" eventType="touchUpInside" id="4Zy-Vz-7Ki"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lj0-zv-KfK" customClass="CustomNavigationBar" customModule="R_CustomNavigation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="85"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="va0-II-7id"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VwC-06-voB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wag-oa-P3Q" firstAttribute="centerY" secondItem="1HU-ZX-hEV" secondAttribute="centerY" id="HFf-NO-dxC"/>
+                            <constraint firstItem="Lj0-zv-KfK" firstAttribute="top" secondItem="1HU-ZX-hEV" secondAttribute="top" id="OVR-1g-7Dl"/>
+                            <constraint firstItem="Lj0-zv-KfK" firstAttribute="trailing" secondItem="VwC-06-voB" secondAttribute="trailing" id="io7-2y-4Gv"/>
+                            <constraint firstItem="Lj0-zv-KfK" firstAttribute="leading" secondItem="VwC-06-voB" secondAttribute="leading" id="peJ-xf-3Mf"/>
                             <constraint firstItem="Wag-oa-P3Q" firstAttribute="centerX" secondItem="1HU-ZX-hEV" secondAttribute="centerX" id="sYT-V1-gXG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N2V-wL-1da"/>
+                    <connections>
+                        <outlet property="customNavigationBar" destination="Lj0-zv-KfK" id="K7G-7V-IEo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBJ-ga-w3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-504" y="349"/>
+            <point key="canvasLocation" x="-504.02010050251255" y="348.92086330935257"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="EEY-Za-F74">
@@ -61,9 +74,26 @@
                     <view key="view" contentMode="scaleToFill" id="ygi-K5-Z0W">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRY-jW-DjR" customClass="CustomNavigationBar" customModule="R_CustomNavigation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="85"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="cE9-4J-UDo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j6x-Pw-FWH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DRY-jW-DjR" firstAttribute="top" secondItem="ygi-K5-Z0W" secondAttribute="top" id="5XW-Mb-Uz0"/>
+                            <constraint firstItem="DRY-jW-DjR" firstAttribute="leading" secondItem="j6x-Pw-FWH" secondAttribute="leading" id="MFS-fI-LGd"/>
+                            <constraint firstItem="DRY-jW-DjR" firstAttribute="trailing" secondItem="j6x-Pw-FWH" secondAttribute="trailing" id="Wcg-HJ-uhe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customNavigationBar" destination="DRY-jW-DjR" id="TXh-jT-VRD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0d5-nb-Gzv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
