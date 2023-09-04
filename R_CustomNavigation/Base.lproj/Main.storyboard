@@ -41,10 +41,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lj0-zv-KfK" customClass="CustomNavigationBar" customModule="R_CustomNavigation" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="1194" height="85"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="va0-II-7id"/>
+                                    <constraint firstAttribute="height" constant="80" id="va0-II-7id"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -76,10 +76,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRY-jW-DjR" customClass="CustomNavigationBar" customModule="R_CustomNavigation" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="1194" height="85"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="cE9-4J-UDo"/>
+                                    <constraint firstAttribute="height" constant="80" id="cE9-4J-UDo"/>
                                 </constraints>
                             </view>
                         </subviews>

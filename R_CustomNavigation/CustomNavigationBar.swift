@@ -12,7 +12,7 @@ class CustomNavigationBar: UIView {
     
     @IBOutlet var contentView: UIView!
         
-    static let barHeight: CGFloat = 85.0
+    static let barHeight: CGFloat = 80.0
     weak var navigationViewController: UINavigationController?
     
     override init(frame: CGRect) {
