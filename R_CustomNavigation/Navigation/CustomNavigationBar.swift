@@ -54,7 +54,7 @@ class CustomNavigationBar: UIView {
     @IBOutlet var contentView: UIView!
     
     static let barHeight: CGFloat = 80.0
-    weak var navigationViewController: UINavigationController?
+    weak var navigationController: UINavigationController?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -87,28 +87,28 @@ class CustomNavigationBar: UIView {
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        navigationViewController?.popViewController(animated: false)
+        navigationController?.popViewController(animated: false)
     }
     @IBAction func homeButtonTapped(_ sender: UIButton) {
         switchPrevButton(isOn: false)
         guard currentVC != .home else { return }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "home") as! HomeViewController
-        navigationViewController?.setViewControllers([vc], animated: false)
+        navigationController?.setViewControllers([vc], animated: false)
     }
     @IBAction func aButtonTapped(_ sender: Any) {
         switchPrevButton(isOn: false)
         guard currentVC != .a else { return }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "a") as! AViewController
-        navigationViewController?.setViewControllers([vc], animated: false)
+        navigationController?.setViewControllers([vc], animated: false)
     }
     @IBAction func bButtonTapped(_ sender: UIButton) {
         switchPrevButton(isOn: false)
         guard currentVC != .b else { return }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "b") as! BViewController
-        navigationViewController?.setViewControllers([vc], animated: false)
+        navigationController?.setViewControllers([vc], animated: false)
     }
     
     func setCurrentVc(type: CustomNavigationBar.VcType) {

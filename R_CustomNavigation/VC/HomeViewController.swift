@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        customNavigationBar.navigationViewController = self.navigationController
+        customNavigationBar.navigationController = self.navigationController
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
     }

@@ -12,7 +12,7 @@ class NextViewController: UIViewController {
     
     @IBOutlet weak var customNavigationBar: CustomNavigationBar! {
         didSet {
-            customNavigationBar.navigationViewController = self.navigationController
+            customNavigationBar.navigationController = self.navigationController
             customNavigationBar.switchPrevButton(isOn: true)
         }
     }
