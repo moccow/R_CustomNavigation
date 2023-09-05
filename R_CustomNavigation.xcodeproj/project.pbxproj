@@ -88,6 +88,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8442A7212AA6C05500106DC0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				8470F31A2AA17E4600659BF9 /* CustomNavigationController.swift */,
+				848E428B2AA59D870077A297 /* CustomNavigationBar.swift */,
+				848E42892AA57F070077A297 /* CustomNavigationBar.xib */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		8442A7222AA6C07100106DC0 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				8470F31C2AA19DA000659BF9 /* HomeViewController.swift */,
+				8470F31E2AA1A6AE00659BF9 /* AViewController.swift */,
+				848E428D2AA5AC7B0077A297 /* BViewController.swift */,
+				8442A71F2AA67D7000106DC0 /* NextViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		8470F2DE2AA1712D00659BF9 = {
 			isa = PBXGroup;
 			children = (
@@ -113,14 +134,9 @@
 			children = (
 				8470F2EA2AA1712D00659BF9 /* AppDelegate.swift */,
 				8470F2EC2AA1712D00659BF9 /* SceneDelegate.swift */,
-				8470F31A2AA17E4600659BF9 /* CustomNavigationController.swift */,
 				8470F2F02AA1712D00659BF9 /* Main.storyboard */,
-				8470F31C2AA19DA000659BF9 /* HomeViewController.swift */,
-				848E428B2AA59D870077A297 /* CustomNavigationBar.swift */,
-				848E42892AA57F070077A297 /* CustomNavigationBar.xib */,
-				8470F31E2AA1A6AE00659BF9 /* AViewController.swift */,
-				848E428D2AA5AC7B0077A297 /* BViewController.swift */,
-				8442A71F2AA67D7000106DC0 /* NextViewController.swift */,
+				8442A7222AA6C07100106DC0 /* VC */,
+				8442A7212AA6C05500106DC0 /* Navigation */,
 				8470F2F32AA1712F00659BF9 /* Assets.xcassets */,
 				8470F2F52AA1712F00659BF9 /* LaunchScreen.storyboard */,
 				8470F2F82AA1712F00659BF9 /* Info.plist */,

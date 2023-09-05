@@ -10,11 +10,11 @@ import UIKit
 
 class CustomNavigationBar: UIView {
     
-    enum VcType: Int {
-        case home = 0
-        case a = 1
-        case b = 2
-        case next = 101
+    enum VcType {
+        case home
+        case a
+        case b
+        case next
 
         var activeImage: UIImage? {
             switch self {
