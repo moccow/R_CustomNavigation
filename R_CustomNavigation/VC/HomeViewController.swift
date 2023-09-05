@@ -10,19 +10,25 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var customNavigationBar: CustomNavigationBar!
+    var customNavigationBar: CustomNavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        customNavigationBar.navigationController = self.navigationController
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
         
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            customNavigationBar = appDelegate.customNavigationBar
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        view.addSubview(customNavigationBar)
+        customNavigationBar.setAutoLayout(view: self.view)
+        customNavigationBar.navigationController = self.navigationController
         customNavigationBar.setCurrentVc(type: .home)
+        customNavigationBar.switchPrevButton(isOn: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     @IBAction func secondButtonTapped(_ sender: UIButton) {
