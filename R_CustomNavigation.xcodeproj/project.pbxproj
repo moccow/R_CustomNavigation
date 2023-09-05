@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8442A7202AA67D7000106DC0 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442A71F2AA67D7000106DC0 /* NextViewController.swift */; };
 		8470F2EB2AA1712D00659BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470F2EA2AA1712D00659BF9 /* AppDelegate.swift */; };
 		8470F2ED2AA1712D00659BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470F2EC2AA1712D00659BF9 /* SceneDelegate.swift */; };
 		8470F2F22AA1712D00659BF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470F2F02AA1712D00659BF9 /* Main.storyboard */; };
@@ -16,7 +17,7 @@
 		8470F30C2AA1713000659BF9 /* R_CustomNavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470F30B2AA1713000659BF9 /* R_CustomNavigationUITests.swift */; };
 		8470F30E2AA1713000659BF9 /* R_CustomNavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470F30D2AA1713000659BF9 /* R_CustomNavigationUITestsLaunchTests.swift */; };
 		8470F31B2AA17E4600659BF9 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470F31A2AA17E4600659BF9 /* CustomNavigationController.swift */; };
-		8470F31D2AA19DA000659BF9 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470F31C2AA19DA000659BF9 /* TopViewController.swift */; };
+		8470F31D2AA19DA000659BF9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470F31C2AA19DA000659BF9 /* HomeViewController.swift */; };
 		8470F31F2AA1A6AE00659BF9 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470F31E2AA1A6AE00659BF9 /* AViewController.swift */; };
 		848E428A2AA57F070077A297 /* CustomNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848E42892AA57F070077A297 /* CustomNavigationBar.xib */; };
 		848E428C2AA59D870077A297 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E428B2AA59D870077A297 /* CustomNavigationBar.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8442A71F2AA67D7000106DC0 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		8470F2E72AA1712D00659BF9 /* R_CustomNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R_CustomNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8470F2EA2AA1712D00659BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8470F2EC2AA1712D00659BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		8470F30B2AA1713000659BF9 /* R_CustomNavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_CustomNavigationUITests.swift; sourceTree = "<group>"; };
 		8470F30D2AA1713000659BF9 /* R_CustomNavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_CustomNavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8470F31A2AA17E4600659BF9 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
-		8470F31C2AA19DA000659BF9 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		8470F31C2AA19DA000659BF9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8470F31E2AA1A6AE00659BF9 /* AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
 		848E42892AA57F070077A297 /* CustomNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationBar.xib; sourceTree = "<group>"; };
 		848E428B2AA59D870077A297 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
@@ -113,11 +115,12 @@
 				8470F2EC2AA1712D00659BF9 /* SceneDelegate.swift */,
 				8470F31A2AA17E4600659BF9 /* CustomNavigationController.swift */,
 				8470F2F02AA1712D00659BF9 /* Main.storyboard */,
-				8470F31C2AA19DA000659BF9 /* TopViewController.swift */,
+				8470F31C2AA19DA000659BF9 /* HomeViewController.swift */,
 				848E428B2AA59D870077A297 /* CustomNavigationBar.swift */,
 				848E42892AA57F070077A297 /* CustomNavigationBar.xib */,
 				8470F31E2AA1A6AE00659BF9 /* AViewController.swift */,
 				848E428D2AA5AC7B0077A297 /* BViewController.swift */,
+				8442A71F2AA67D7000106DC0 /* NextViewController.swift */,
 				8470F2F32AA1712F00659BF9 /* Assets.xcassets */,
 				8470F2F52AA1712F00659BF9 /* LaunchScreen.storyboard */,
 				8470F2F82AA1712F00659BF9 /* Info.plist */,
@@ -275,10 +278,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				848E428E2AA5AC7B0077A297 /* BViewController.swift in Sources */,
+				8442A7202AA67D7000106DC0 /* NextViewController.swift in Sources */,
 				848E428C2AA59D870077A297 /* CustomNavigationBar.swift in Sources */,
 				8470F31F2AA1A6AE00659BF9 /* AViewController.swift in Sources */,
 				8470F31B2AA17E4600659BF9 /* CustomNavigationController.swift in Sources */,
-				8470F31D2AA19DA000659BF9 /* TopViewController.swift in Sources */,
+				8470F31D2AA19DA000659BF9 /* HomeViewController.swift in Sources */,
 				8470F2EB2AA1712D00659BF9 /* AppDelegate.swift in Sources */,
 				8470F2ED2AA1712D00659BF9 /* SceneDelegate.swift in Sources */,
 			);

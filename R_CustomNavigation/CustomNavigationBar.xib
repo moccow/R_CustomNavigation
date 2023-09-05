@@ -14,6 +14,8 @@
                 <outlet property="bButton" destination="StH-vR-GMU" id="vE9-sC-kij"/>
                 <outlet property="contentView" destination="EPL-Ja-ua2" id="yM0-jQ-wJ6"/>
                 <outlet property="homeButton" destination="Ubb-ac-Uv4" id="2ao-o2-Kkp"/>
+                <outlet property="prevButton" destination="SPA-zb-jUa" id="j2g-Ik-Es5"/>
+                <outlet property="prevButtonWidth" destination="ZSV-fN-UiR" id="agb-Op-wOw"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
