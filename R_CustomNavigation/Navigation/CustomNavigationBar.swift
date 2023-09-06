@@ -90,7 +90,7 @@ class CustomNavigationBar: UIView {
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        navigationController?.popViewController(animated: false)
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func homeButtonTapped(_ sender: UIButton) {
         guard currentVC != .home else { return }

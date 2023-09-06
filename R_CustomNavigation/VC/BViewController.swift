@@ -28,5 +28,6 @@ class BViewController: UIViewController {
         customNavigationBar.setAutoLayout(view: self.view)
         customNavigationBar.navigationController = self.navigationController
         customNavigationBar.setCurrentVc(type: .b)
+        customNavigationBar.isHidden = false
     }
 }

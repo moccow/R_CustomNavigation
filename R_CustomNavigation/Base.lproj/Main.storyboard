@@ -48,11 +48,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wag-oa-P3Q">
-                                <rect key="frame" x="559.5" y="399.5" width="75" height="35"/>
+                                <rect key="frame" x="579.5" y="399.5" width="35.5" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="A"/>
                                 <connections>
-                                    <action selector="secondButtonTapped:" destination="1XK-Bi-gCu" eventType="touchUpInside" id="4Zy-Vz-7Ki"/>
+                                    <action selector="aButtonTapped:" destination="1XK-Bi-gCu" eventType="touchUpInside" id="4Zy-Vz-7Ki"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-FF-KPA">
@@ -61,16 +61,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fll-49-n7X">
+                                <rect key="frame" x="579.5" y="442" width="35" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="B"/>
+                                <connections>
+                                    <action selector="bButtonTapped:" destination="1XK-Bi-gCu" eventType="touchUpInside" id="ZF2-9n-ISz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VwC-06-voB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fll-49-n7X" firstAttribute="top" secondItem="Wag-oa-P3Q" secondAttribute="bottom" constant="7.5" id="0d4-Gw-i3H"/>
                             <constraint firstItem="VwC-06-voB" firstAttribute="trailing" secondItem="ahZ-FF-KPA" secondAttribute="trailing" constant="32" id="1Sy-tU-g6i"/>
                             <constraint firstItem="ahZ-FF-KPA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VwC-06-voB" secondAttribute="leading" symbolic="YES" id="3ud-Ng-eD9"/>
                             <constraint firstItem="Wag-oa-P3Q" firstAttribute="centerY" secondItem="1HU-ZX-hEV" secondAttribute="centerY" id="HFf-NO-dxC"/>
                             <constraint firstItem="VwC-06-voB" firstAttribute="bottom" secondItem="ahZ-FF-KPA" secondAttribute="bottom" constant="16" id="Kz6-iB-6iA"/>
                             <constraint firstItem="VwC-06-voB" firstAttribute="trailing" secondItem="ahZ-FF-KPA" secondAttribute="trailing" constant="32" id="Tbe-gM-8e1"/>
                             <constraint firstItem="ahZ-FF-KPA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VwC-06-voB" secondAttribute="leading" symbolic="YES" id="qi8-Xf-Lzw"/>
+                            <constraint firstItem="fll-49-n7X" firstAttribute="centerX" secondItem="1HU-ZX-hEV" secondAttribute="centerX" id="qyr-Kr-mft"/>
                             <constraint firstItem="Wag-oa-P3Q" firstAttribute="centerX" secondItem="1HU-ZX-hEV" secondAttribute="centerX" id="sYT-V1-gXG"/>
                         </constraints>
                     </view>
