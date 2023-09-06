@@ -75,6 +75,17 @@ class CustomNavigationBar: UIView {
         switchPrevButton(isOn: false)
     }
     
+    func setAutoLayout(view: UIView) {
+        // Auto Layout制約を設定
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.topAnchor.constraint(equalTo: view.topAnchor),
+            self.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            self.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            self.heightAnchor.constraint(equalToConstant: CustomNavigationBar.barHeight)
+        ])
+    }
+    
     func switchPrevButton(isOn: Bool) {
         prevButton.isEnabled = isOn
 //        UIView.animate(withDuration: 0.3) {

@@ -10,22 +10,23 @@ import UIKit
 
 class NextViewController: UIViewController {
     
-    @IBOutlet weak var customNavigationBar: CustomNavigationBar! {
-        didSet {
-            customNavigationBar.navigationController = self.navigationController
-            customNavigationBar.switchPrevButton(isOn: true)
-        }
-    }
-    
+    var customNavigationBar: CustomNavigationBar!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // カスタムナビゲーションバーを作成
-        
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            customNavigationBar = appDelegate.customNavigationBar
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         customNavigationBar.setCurrentVc(type: .next)
+
+        view.addSubview(customNavigationBar)
+        customNavigationBar.setAutoLayout(view: self.view)
+        customNavigationBar.navigationController = self.navigationController
+        customNavigationBar.switchPrevButton(isOn: true)
     }
 }
