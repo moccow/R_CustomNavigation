@@ -27,6 +27,5 @@ class AViewController: UIViewController {
         customNavigationBar.setAutoLayout(view: self.view)
         customNavigationBar.navigationController = self.navigationController
         customNavigationBar.setCurrentVc(type: .a)
-        customNavigationBar.switchPrevButton(isOn: false)
     }
 }
