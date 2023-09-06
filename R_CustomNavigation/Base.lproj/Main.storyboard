@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kvx-fP-OLK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XAt-xu-p4S">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -8,21 +8,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Custom Navigation Controller-->
-        <scene sceneID="hab-Iv-7iE">
+        <!--Login View Controller-->
+        <scene sceneID="vIQ-WM-ODd">
             <objects>
-                <navigationController id="Kvx-fP-OLK" customClass="CustomNavigationController" customModule="R_CustomNavigation" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4da-Hn-0YG">
-                        <rect key="frame" x="0.0" y="24" width="1194" height="50"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="1XK-Bi-gCu" kind="relationship" relationship="rootViewController" id="3Do-Fp-pFY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d9G-kn-7Fo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="login" id="XAt-xu-p4S" customClass="LoginViewController" customModule="R_CustomNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EJ8-T6-Cx7">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-rB-arR">
+                                <rect key="frame" x="566.5" y="399.5" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="login"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="ce6-yq-XxU" eventType="touchUpInside" id="VrQ-Kh-C5b"/>
+                                    <action selector="loginButtonTapped:" destination="XAt-xu-p4S" eventType="touchUpInside" id="rii-3Y-kSv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gTk-c8-7Mw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dc1-rB-arR" firstAttribute="centerY" secondItem="EJ8-T6-Cx7" secondAttribute="centerY" id="IQN-Bg-bGK"/>
+                            <constraint firstItem="dc1-rB-arR" firstAttribute="centerX" secondItem="EJ8-T6-Cx7" secondAttribute="centerX" id="Y3T-MM-AsR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0i-lb-xgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ce6-yq-XxU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-504" y="-832"/>
+            <point key="canvasLocation" x="-512" y="-1741"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="aYg-h2-jnc">
@@ -63,6 +78,7 @@
                             <constraint firstItem="VwC-06-voB" firstAttribute="trailing" secondItem="ahZ-FF-KPA" secondAttribute="trailing" constant="32" id="Tbe-gM-8e1"/>
                             <constraint firstItem="Lj0-zv-KfK" firstAttribute="trailing" secondItem="VwC-06-voB" secondAttribute="trailing" id="io7-2y-4Gv"/>
                             <constraint firstItem="Lj0-zv-KfK" firstAttribute="leading" secondItem="VwC-06-voB" secondAttribute="leading" id="peJ-xf-3Mf"/>
+                            <constraint firstItem="ahZ-FF-KPA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VwC-06-voB" secondAttribute="leading" symbolic="YES" id="qi8-Xf-Lzw"/>
                             <constraint firstItem="Wag-oa-P3Q" firstAttribute="centerX" secondItem="1HU-ZX-hEV" secondAttribute="centerX" id="sYT-V1-gXG"/>
                         </constraints>
                     </view>
