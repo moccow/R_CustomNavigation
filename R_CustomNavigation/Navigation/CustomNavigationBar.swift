@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol CustomNavigationBarDelegate: AnyObject {
+    /// ハンバーガーボタン
+    func humburgerButtonTapped()
+}
+    
 class CustomNavigationBar: UIView {
     
     enum VcType {
@@ -43,6 +48,7 @@ class CustomNavigationBar: UIView {
         }
     }
     
+    weak var delegate: CustomNavigationBarDelegate?
     private var currentVC = CustomNavigationBar.VcType.home
     
     @IBOutlet weak var prevButton: UIButton!
@@ -53,9 +59,12 @@ class CustomNavigationBar: UIView {
     
     @IBOutlet var contentView: UIView!
     
-    static let barHeight: CGFloat = 80.0
+    static let NavBarHeight: CGFloat = 80.0
+    static let SideMenuWidth: CGFloat = 300.0
     weak var navigationController: UINavigationController?
-    
+    weak var containerViewLeading: NSLayoutConstraint?
+    let sideMenuView = SideMenuView()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -73,17 +82,31 @@ class CustomNavigationBar: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         switchPrevButton(isOn: false)
+        self.addSubview(sideMenuView)
     }
     
     func setAutoLayout(view: UIView) {
-        // Auto Layout制約を設定
+        
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.topAnchor.constraint(equalTo: view.topAnchor),
             self.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             self.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            self.heightAnchor.constraint(equalToConstant: CustomNavigationBar.barHeight)
+            self.heightAnchor.constraint(equalToConstant: CustomNavigationBar.NavBarHeight)
         ])
+        
+        sideMenuView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            sideMenuView.topAnchor.constraint(equalTo: view.topAnchor),
+            sideMenuView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            sideMenuView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: CustomNavigationBar.SideMenuWidth),
+            sideMenuView.widthAnchor.constraint(equalToConstant: CustomNavigationBar.SideMenuWidth)
+        ])
+
+    }
+    
+    func setLeading(constraint: NSLayoutConstraint) {
+        containerViewLeading = constraint
     }
     
     func switchPrevButton(isOn: Bool) {
@@ -122,6 +145,7 @@ class CustomNavigationBar: UIView {
         navigationController?.setViewControllers([vc], animated: false)
     }
     @IBAction func hamburgerButtonTapped(_ sender: UIButton) {
+        delegate?.humburgerButtonTapped()
     }
     
     func setCurrentVc(type: CustomNavigationBar.VcType) {

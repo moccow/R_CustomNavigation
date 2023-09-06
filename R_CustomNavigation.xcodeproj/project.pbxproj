@@ -10,6 +10,8 @@
 		8442A7202AA67D7000106DC0 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442A71F2AA67D7000106DC0 /* NextViewController.swift */; };
 		8442A8112AA80BBB00106DC0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442A8102AA80BBB00106DC0 /* LoginViewController.swift */; };
 		8442A8132AA80EE800106DC0 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442A8122AA80EE700106DC0 /* CustomNavigationController.swift */; };
+		8442A8152AA8887E00106DC0 /* SideMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8442A8142AA8887E00106DC0 /* SideMenuView.xib */; };
+		8442A8172AA8890D00106DC0 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442A8162AA8890D00106DC0 /* SideMenuView.swift */; };
 		8470F2EB2AA1712D00659BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470F2EA2AA1712D00659BF9 /* AppDelegate.swift */; };
 		8470F2ED2AA1712D00659BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470F2EC2AA1712D00659BF9 /* SceneDelegate.swift */; };
 		8470F2F22AA1712D00659BF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470F2F02AA1712D00659BF9 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		8442A71F2AA67D7000106DC0 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		8442A8102AA80BBB00106DC0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8442A8122AA80EE700106DC0 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		8442A8142AA8887E00106DC0 /* SideMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuView.xib; sourceTree = "<group>"; };
+		8442A8162AA8890D00106DC0 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		8470F2E72AA1712D00659BF9 /* R_CustomNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R_CustomNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8470F2EA2AA1712D00659BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8470F2EC2AA1712D00659BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +99,9 @@
 			children = (
 				8442A8122AA80EE700106DC0 /* CustomNavigationController.swift */,
 				848E428B2AA59D870077A297 /* CustomNavigationBar.swift */,
+				8442A8162AA8890D00106DC0 /* SideMenuView.swift */,
 				848E42892AA57F070077A297 /* CustomNavigationBar.xib */,
+				8442A8142AA8887E00106DC0 /* SideMenuView.xib */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				848E428A2AA57F070077A297 /* CustomNavigationBar.xib in Resources */,
+				8442A8152AA8887E00106DC0 /* SideMenuView.xib in Resources */,
 				8470F2F72AA1712F00659BF9 /* LaunchScreen.storyboard in Resources */,
 				8470F2F42AA1712F00659BF9 /* Assets.xcassets in Resources */,
 				8470F2F22AA1712D00659BF9 /* Main.storyboard in Resources */,
@@ -298,6 +305,7 @@
 			files = (
 				8442A8112AA80BBB00106DC0 /* LoginViewController.swift in Sources */,
 				848E428E2AA5AC7B0077A297 /* BViewController.swift in Sources */,
+				8442A8172AA8890D00106DC0 /* SideMenuView.swift in Sources */,
 				8442A7202AA67D7000106DC0 /* NextViewController.swift in Sources */,
 				8442A8132AA80EE800106DC0 /* CustomNavigationController.swift in Sources */,
 				848E428C2AA59D870077A297 /* CustomNavigationBar.swift in Sources */,

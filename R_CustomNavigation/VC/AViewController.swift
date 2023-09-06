@@ -10,8 +10,10 @@ import UIKit
 
 class AViewController: UIViewController {
     
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerViewLeadingConstraint: NSLayoutConstraint!
     var customNavigationBar: CustomNavigationBar!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,10 +25,20 @@ class AViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        view.addSubview(customNavigationBar)
-        customNavigationBar.setAutoLayout(view: self.view)
+        containerView.addSubview(customNavigationBar)
+        customNavigationBar.setAutoLayout(view: containerView)
         customNavigationBar.navigationController = self.navigationController
         customNavigationBar.setCurrentVc(type: .a)
         customNavigationBar.switchPrevButton(isOn: false)
+        customNavigationBar.delegate = self
+    }
+}
+
+extension AViewController: CustomNavigationBarDelegate {
+    func humburgerButtonTapped() {
+        UIView.animate(withDuration: 0.3) {
+            self.containerViewLeadingConstraint.constant = self.containerViewLeadingConstraint.constant == 0 ? -CustomNavigationBar.SideMenuWidth : 0
+            self.view.layoutIfNeeded()
+        }
     }
 }
