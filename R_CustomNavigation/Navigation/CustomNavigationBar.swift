@@ -110,6 +110,8 @@ class CustomNavigationBar: UIView {
         let vc = storyboard.instantiateViewController(withIdentifier: "b") as! BViewController
         navigationController?.setViewControllers([vc], animated: false)
     }
+    @IBAction func hamburgerButtonTapped(_ sender: UIButton) {
+    }
     
     func setCurrentVc(type: CustomNavigationBar.VcType) {
         guard type == .home || type == .a || type == .b else {
