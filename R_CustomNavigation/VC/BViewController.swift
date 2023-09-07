@@ -37,24 +37,18 @@ class BViewController: UIViewController {
 
 extension BViewController: CustomNavigationBarDelegate {
     func backButtonTapped() {
-        transitionWithAnimation(escaping: {
-            self.navigationController?.popViewController(animated: true)
-        })
+        self.navigationController?.popViewController(animated: true)
     }
     
     func aButtonTapped() {
-        transitionWithAnimation(escaping: {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "a") as! AViewController
-            self.navigationController?.pushViewController(vc, animated: true)
-        })
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "a") as! AViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func bButtonTapped() {
-        transitionWithAnimation(escaping: {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "b") as! BViewController
-            self.navigationController?.pushViewController(vc, animated: true)
-        })
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "b") as! BViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
