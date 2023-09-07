@@ -29,5 +29,32 @@ class BViewController: UIViewController {
         customNavigationBar.navigationController = self.navigationController
         customNavigationBar.setCurrentVc(type: .b)
         customNavigationBar.isHidden = false
+        customNavigationBar.delegate = self
+
+    }
+    
+}
+
+extension BViewController: CustomNavigationBarDelegate {
+    func backButtonTapped() {
+        transitionWithAnimation(escaping: {
+            self.navigationController?.popViewController(animated: true)
+        })
+    }
+    
+    func aButtonTapped() {
+        transitionWithAnimation(escaping: {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "a") as! AViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+    }
+    
+    func bButtonTapped() {
+        transitionWithAnimation(escaping: {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "b") as! BViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
     }
 }

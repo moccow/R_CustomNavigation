@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol CustomNavigationBarDelegate: AnyObject {
+    func backButtonTapped()
+    func aButtonTapped()
+    func bButtonTapped()
+}
+
 class CustomNavigationBar: UIView {
     
     enum VcType {
@@ -43,6 +49,7 @@ class CustomNavigationBar: UIView {
         }
     }
     
+    weak var delegate: CustomNavigationBarDelegate?
     private var currentVC = CustomNavigationBar.VcType.home
     
     @IBOutlet weak var prevButton: UIButton!
@@ -90,7 +97,7 @@ class CustomNavigationBar: UIView {
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        delegate?.backButtonTapped()
     }
     @IBAction func homeButtonTapped(_ sender: UIButton) {
         guard currentVC != .home else { return }
@@ -100,15 +107,11 @@ class CustomNavigationBar: UIView {
     }
     @IBAction func aButtonTapped(_ sender: Any) {
         guard currentVC != .a else { return }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "a") as! AViewController
-        navigationController?.pushViewController(vc, animated: true)
+        delegate?.aButtonTapped()
     }
     @IBAction func bButtonTapped(_ sender: UIButton) {
         guard currentVC != .b else { return }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "b") as! BViewController
-        navigationController?.pushViewController(vc, animated: true)
+        delegate?.bButtonTapped()
     }
     
     func setCurrentVc(type: CustomNavigationBar.VcType) {
