@@ -9,10 +9,12 @@
 import UIKit
 
 protocol CustomNavigationBarDelegate: AnyObject {
-    /// ハンバーガーボタン
+    func backButtonTapped()
+    func aButtonTapped()
+    func bButtonTapped()
     func humburgerButtonTapped()
 }
-    
+
 class CustomNavigationBar: UIView {
     
     enum VcType {
@@ -81,7 +83,6 @@ class CustomNavigationBar: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        switchPrevButton(isOn: false)
         self.addSubview(sideMenuView)
     }
     
@@ -111,38 +112,24 @@ class CustomNavigationBar: UIView {
     
     func switchPrevButton(isOn: Bool) {
         prevButton.isEnabled = isOn
-//        UIView.animate(withDuration: 0.3) {
-//            // prevButtonの幅を0に変更
-//            self.prevButtonWidth.constant = isOn ? 85 : 0
-//
-//            // Auto Layoutの制約を更新
-//            self.layoutIfNeeded()
-//        }
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        navigationController?.popViewController(animated: false)
+        delegate?.backButtonTapped()
     }
     @IBAction func homeButtonTapped(_ sender: UIButton) {
-        switchPrevButton(isOn: false)
         guard currentVC != .home else { return }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "home") as! HomeViewController
         navigationController?.setViewControllers([vc], animated: false)
     }
     @IBAction func aButtonTapped(_ sender: Any) {
-        switchPrevButton(isOn: false)
         guard currentVC != .a else { return }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "a") as! AViewController
-        navigationController?.setViewControllers([vc], animated: false)
+        delegate?.aButtonTapped()
     }
     @IBAction func bButtonTapped(_ sender: UIButton) {
-        switchPrevButton(isOn: false)
         guard currentVC != .b else { return }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "b") as! BViewController
-        navigationController?.setViewControllers([vc], animated: false)
+        delegate?.bButtonTapped()
     }
     @IBAction func hamburgerButtonTapped(_ sender: UIButton) {
         delegate?.humburgerButtonTapped()

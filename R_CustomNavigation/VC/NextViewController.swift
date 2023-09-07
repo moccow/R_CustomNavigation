@@ -27,6 +27,5 @@ class NextViewController: UIViewController {
         view.addSubview(customNavigationBar)
         customNavigationBar.setAutoLayout(view: self.view)
         customNavigationBar.navigationController = self.navigationController
-        customNavigationBar.switchPrevButton(isOn: true)
     }
 }

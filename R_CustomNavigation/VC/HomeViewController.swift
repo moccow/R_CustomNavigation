@@ -27,13 +27,20 @@ class HomeViewController: UIViewController {
         customNavigationBar.setAutoLayout(view: self.view)
         customNavigationBar.navigationController = self.navigationController
         customNavigationBar.setCurrentVc(type: .home)
-        customNavigationBar.switchPrevButton(isOn: false)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        customNavigationBar.isHidden = true
     }
 
-    @IBAction func secondButtonTapped(_ sender: UIButton) {
+    @IBAction func aButtonTapped(_ sender: UIButton) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
-        navigationController?.pushViewController(vc, animated: false)
+            let vc = storyboard.instantiateViewController(withIdentifier: "a") as! AViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func bButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "b") as! BViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
