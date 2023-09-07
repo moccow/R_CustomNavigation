@@ -17,6 +17,7 @@ class BViewController: UIViewController {
     @IBOutlet weak var containerViewLeadingConstraint: NSLayoutConstraint!
     
     var customNavigationBar: CustomNavigationBar!
+    var sideMenuView: SideMenuView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class BViewController: UIViewController {
         // カスタムナビゲーションバーを作成
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             customNavigationBar = appDelegate.customNavigationBar
+            sideMenuView = appDelegate.sideMenuView
         }
     }
     
@@ -36,8 +38,21 @@ class BViewController: UIViewController {
         customNavigationBar.setCurrentVc(type: .b)
         customNavigationBar.isHidden = false
         customNavigationBar.delegate = self
-        // MARK: storyboardでデバイス幅を指定できなかったのでここで設定
-        containerViewWidthConstraint.constant = UIScreen.main.bounds.size.width
+        // MARK: デバイス幅+サイドバー幅
+        containerViewWidthConstraint.constant = UIScreen.main.bounds.size.width + SideMenuView.SideMenuWidth
+
+        containerView.addSubview(sideMenuView)
+        sideMenuView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            sideMenuView.topAnchor.constraint(equalTo: containerView.topAnchor),
+            sideMenuView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            sideMenuView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0),
+            sideMenuView.widthAnchor.constraint(equalToConstant: SideMenuView.SideMenuWidth)
+        ])
+        sideMenuView.delegate = self
+        
+        containerViewLeadingConstraint.constant = 0
+        self.view.layoutIfNeeded()
 
     }
     
@@ -62,8 +77,16 @@ extension BViewController: CustomNavigationBarDelegate {
     
     func humburgerButtonTapped() {
         UIView.animate(withDuration: 0.3) {
-            self.containerViewLeadingConstraint.constant = self.containerViewLeadingConstraint.constant == 0 ? -CustomNavigationBar.SideMenuWidth : 0
+            self.containerViewLeadingConstraint.constant = self.containerViewLeadingConstraint.constant == 0 ? -SideMenuView.SideMenuWidth : 0
             self.view.layoutIfNeeded()
         }
+    }
+}
+
+extension BViewController: SideMenuViewDelegate {
+    func nextButtonTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

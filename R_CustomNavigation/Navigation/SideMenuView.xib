@@ -18,18 +18,20 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="834"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SideMenu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGq-wG-xZ7">
-                    <rect key="frame" x="112" y="406.66666666666669" width="76.333333333333314" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3o-jv-Y7I">
+                    <rect key="frame" x="121.66666666666667" y="399.66666666666669" width="56.666666666666671" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="next"/>
+                    <connections>
+                        <action selector="nextButtonTapped:" destination="-1" eventType="touchUpInside" id="kjs-Ar-iGd"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="kGq-wG-xZ7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2vJ-pC-OzT"/>
-                <constraint firstItem="kGq-wG-xZ7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="F2O-7K-Xgf"/>
+                <constraint firstItem="t3o-jv-Y7I" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="S6n-DA-4Xx"/>
+                <constraint firstItem="t3o-jv-Y7I" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Vdb-Qo-Grf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-33" y="20"/>

@@ -187,8 +187,20 @@
                     <view key="view" contentMode="scaleToFill" id="ArH-0j-JxG">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="next" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAN-Zs-Gzc">
+                                <rect key="frame" x="1129" y="777" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zyf-lx-e51"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zyf-lx-e51" firstAttribute="trailing" secondItem="uAN-Zs-Gzc" secondAttribute="trailing" constant="32" id="Fe6-jV-d9w"/>
+                            <constraint firstItem="zyf-lx-e51" firstAttribute="bottom" secondItem="uAN-Zs-Gzc" secondAttribute="bottom" constant="16" id="zN7-Bt-5yI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEX-P1-dSa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

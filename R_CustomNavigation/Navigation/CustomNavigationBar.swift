@@ -62,10 +62,8 @@ class CustomNavigationBar: UIView {
     @IBOutlet var contentView: UIView!
     
     static let NavBarHeight: CGFloat = 80.0
-    static let SideMenuWidth: CGFloat = 300.0
     weak var navigationController: UINavigationController?
     weak var containerViewLeading: NSLayoutConstraint?
-    let sideMenuView = SideMenuView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -83,7 +81,6 @@ class CustomNavigationBar: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.addSubview(sideMenuView)
     }
     
     func setAutoLayout(view: UIView) {
@@ -92,16 +89,8 @@ class CustomNavigationBar: UIView {
         NSLayoutConstraint.activate([
             self.topAnchor.constraint(equalTo: view.topAnchor),
             self.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            self.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            self.heightAnchor.constraint(equalToConstant: CustomNavigationBar.NavBarHeight)
-        ])
-        
-        sideMenuView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            sideMenuView.topAnchor.constraint(equalTo: view.topAnchor),
-            sideMenuView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            sideMenuView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: CustomNavigationBar.SideMenuWidth),
-            sideMenuView.widthAnchor.constraint(equalToConstant: CustomNavigationBar.SideMenuWidth)
+            self.heightAnchor.constraint(equalToConstant: CustomNavigationBar.NavBarHeight),
+            self.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
         ])
 
     }
