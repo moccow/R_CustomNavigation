@@ -10,6 +10,7 @@ import UIKit
 
 protocol CustomNavigationBarDelegate: AnyObject {
     func backButtonTapped()
+    func homeButtonTapped()
     func aButtonTapped()
     func bButtonTapped()
     func humburgerButtonTapped()
@@ -108,9 +109,7 @@ class CustomNavigationBar: UIView {
     }
     @IBAction func homeButtonTapped(_ sender: UIButton) {
         guard currentVC != .home else { return }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "home") as! HomeViewController
-        navigationController?.setViewControllers([vc], animated: false)
+        delegate?.homeButtonTapped()
     }
     @IBAction func aButtonTapped(_ sender: Any) {
         guard currentVC != .a else { return }

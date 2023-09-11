@@ -53,7 +53,6 @@ class BViewController: UIViewController {
         
         containerViewLeadingConstraint.constant = 0
         self.view.layoutIfNeeded()
-
     }
     
 }
@@ -61,6 +60,12 @@ class BViewController: UIViewController {
 extension BViewController: CustomNavigationBarDelegate {
     func backButtonTapped() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func homeButtonTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "home") as! HomeViewController
+        navigationController?.setViewControllers([vc], animated: false)
     }
     
     func aButtonTapped() {
