@@ -101,8 +101,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvj-Rp-Tgl">
                                 <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xB-Wh-FEi">
-                                        <rect key="frame" x="1151.5" y="797" width="10.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xB-Wh-FEi">
+                                        <rect key="frame" x="32" y="797" width="9" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -110,9 +110,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="1xB-Wh-FEi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bvj-Rp-Tgl" secondAttribute="leading" constant="20" symbolic="YES" id="Dl5-BR-Bee"/>
+                                    <constraint firstItem="1xB-Wh-FEi" firstAttribute="leading" secondItem="bvj-Rp-Tgl" secondAttribute="leading" constant="32" id="Dl5-BR-Bee"/>
                                     <constraint firstAttribute="width" constant="1194" id="OLz-od-Jig"/>
-                                    <constraint firstAttribute="trailing" secondItem="1xB-Wh-FEi" secondAttribute="trailing" constant="32" id="Zc3-u5-PiN"/>
                                     <constraint firstAttribute="bottom" secondItem="1xB-Wh-FEi" secondAttribute="bottom" constant="16" id="dZc-SP-Nze"/>
                                 </constraints>
                             </view>
@@ -144,10 +143,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZE-i8-TaP">
-                                <rect key="frame" x="0.0" y="24" width="1194" height="790"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iI-aq-xJm">
-                                        <rect key="frame" x="1151.5" y="753" width="10.5" height="21"/>
+                                        <rect key="frame" x="32" y="797" width="10.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -155,10 +154,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="2iI-aq-xJm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oZE-i8-TaP" secondAttribute="leading" constant="20" symbolic="YES" id="4yS-dt-1cS"/>
+                                    <constraint firstAttribute="bottom" secondItem="2iI-aq-xJm" secondAttribute="bottom" constant="16" id="7BJ-fY-Xwg"/>
                                     <constraint firstAttribute="width" constant="1194" id="FvT-sM-Ny3"/>
-                                    <constraint firstAttribute="bottom" secondItem="2iI-aq-xJm" secondAttribute="bottom" constant="16" id="gy2-aw-Vis"/>
-                                    <constraint firstAttribute="trailing" secondItem="2iI-aq-xJm" secondAttribute="trailing" constant="32" id="sMm-hm-EHC"/>
+                                    <constraint firstItem="2iI-aq-xJm" firstAttribute="leading" secondItem="oZE-i8-TaP" secondAttribute="leading" constant="32" id="IS8-gB-Yun"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -166,8 +164,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oZE-i8-TaP" firstAttribute="leading" secondItem="be9-p7-oRa" secondAttribute="leading" id="4fb-yP-jl9"/>
-                            <constraint firstItem="oZE-i8-TaP" firstAttribute="top" secondItem="be9-p7-oRa" secondAttribute="top" id="BNC-9a-ZBa"/>
-                            <constraint firstItem="oZE-i8-TaP" firstAttribute="bottom" secondItem="be9-p7-oRa" secondAttribute="bottom" id="nME-TJ-aPk"/>
+                            <constraint firstAttribute="bottom" secondItem="oZE-i8-TaP" secondAttribute="bottom" id="Z9k-t0-F4x"/>
+                            <constraint firstItem="oZE-i8-TaP" firstAttribute="top" secondItem="lEc-RW-8Yd" secondAttribute="top" id="dGF-nG-2SL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -189,7 +187,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="next" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAN-Zs-Gzc">
-                                <rect key="frame" x="1129" y="777" width="33" height="21"/>
+                                <rect key="frame" x="32" y="777" width="33" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -198,7 +196,7 @@
                         <viewLayoutGuide key="safeArea" id="zyf-lx-e51"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zyf-lx-e51" firstAttribute="trailing" secondItem="uAN-Zs-Gzc" secondAttribute="trailing" constant="32" id="Fe6-jV-d9w"/>
+                            <constraint firstItem="uAN-Zs-Gzc" firstAttribute="leading" secondItem="zyf-lx-e51" secondAttribute="leading" constant="32" id="qpY-LB-zd7"/>
                             <constraint firstItem="zyf-lx-e51" firstAttribute="bottom" secondItem="uAN-Zs-Gzc" secondAttribute="bottom" constant="16" id="zN7-Bt-5yI"/>
                         </constraints>
                     </view>
